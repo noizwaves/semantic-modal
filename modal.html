@@ -6,23 +6,22 @@
 
   <style>
     .confirmation {
-      background-color: rgba(0, 0, 0, 0.1);
-      position: fixed;
-      top: 0px;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-    }
-
-    .content {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: white;
       padding: 4rem;
+
       border: 1px solid #333;
       box-shadow: #333 0 0 1rem;
+      outline: solid 800px rgba(0, 0, 0, 0.2);
+
+      pointer-events: initial;
+    }
+
+    body {
+      pointer-events: none;
     }
   </style>
 </head>
@@ -57,14 +56,12 @@
 </p>
 
 <div class="confirmation">
-  <div class="content">
-    <div class="message">
-      Are you sure you want to delete Untitled Event?
-    </div>
-    <div class="actions">
-      <button>Confirm</button>
-      <button>Cancel</button>
-    </div>
+  <div class="message">
+    Are you sure you want to delete Untitled Event?
+  </div>
+  <div class="actions">
+    <button>Confirm</button>
+    <button>Cancel</button>
   </div>
 </div>
 </body>
